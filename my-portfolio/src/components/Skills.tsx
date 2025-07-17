@@ -124,11 +124,10 @@ const Skills = () => {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[
-              'JavaScript', 'Python', 'Java', 'C++', 'PHP', 'Ruby',
-              'Vue.js', 'Angular', 'Svelte', 'Redux', 'Zustand', 'React Query',
-              'MySQL', 'Redis', 'Firebase', 'Supabase', 'Prisma', 'Sequelize',
-              'Jest', 'Cypress', 'Playwright', 'Storybook', 'Webpack', 'Vite',
-              'Figma', 'Adobe XD', 'Sketch', 'InVision', 'Zeplin', 'Notion'
+              'JavaScript', 'Python', 'Java', 'C++', 'PHP', 
+              'Angular','Redux','React Query',
+              'MySQL', 'Firebase','Jest', 'Cypress','Storybook','Vite',
+              'Figma' , 'AI' , 'Colab'
             ].map((skill, index) => (
               <motion.div
                 key={skill}

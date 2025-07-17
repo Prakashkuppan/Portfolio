@@ -6,10 +6,10 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Rizzfit Mobile & Web App',
+      title: 'Gym Related application',
       description: 'Fitness platform for class booking, workout tracking, and analytics. Developed core features and integrations for seamless fitness tracking and class booking experience.',
-      image: 'https://images.unsplash.com/photo-1519864600265-abb23847ef2c?w=500&h=300&fit=crop',
-      tech: ['React Native', 'Expo', 'React', 'Python', 'PostgreSQL', 'MariaDB'],
+      image: 'I-love-gym-M.jpg',
+      tech: ['React Expo', 'React', 'PostgreSQL' ,'Nest.js' , 'Type Script'],
       github: 'https://github.com/Prakashkuppan',
       live: '',
       featured: true,
@@ -17,10 +17,10 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Shriram Properties Web App',
+      title: 'Stock Management Related Project',
       description: 'Real estate solution for property, user, and process management. Built frontend with React (TypeScript) and backend with NestJS.',
-      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&h=300&fit=crop',
-      tech: ['React', 'TypeScript', 'NestJS', 'PostgreSQL', 'MariaDB'],
+      image: 'https://www.simplilearn.com/ice9/free_resources_article_thumb/What_Is_Inventory_Management.jpg',
+      tech: ['React', 'TypeScript', 'NestJS', 'PostgreSQL'],
       github: 'https://github.com/Prakashkuppan',
       live: '',
       featured: true,
@@ -103,11 +103,11 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                    // className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                     onClick={e => e.stopPropagation()}
                   >
-                    <Github size={16} />
-                    Code
+                    {/* <Github size={16} /> */}
+                    {/* Code */}
                   </motion.a>
                   {project.live && (
                     <motion.a
@@ -154,8 +154,8 @@ const Projects = () => {
               </div>
               <div className="flex gap-3">
                 <a href={modalProject.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
-                  <Github size={16} />
-                  Code
+                  {/* <Github size={16} /> */}
+                  {/* Code */}
                 </a>
                 {modalProject.live && (
                   <a href={modalProject.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">

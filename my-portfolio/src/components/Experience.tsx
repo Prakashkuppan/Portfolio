@@ -12,7 +12,7 @@ const Experience = () => {
       period: 'July 2024 – Present',
       description: 'Leading and contributing to the development of key projects at Finstein, focusing on scalable web and mobile solutions.',
       details: [
-        'Rizzfit Mobile & Web App: Developed using React Native, Expo, and React for both mobile and web platforms. Implemented core features and integrations for a seamless fitness tracking and class booking experience.',
+        'Gym application: Developed using React Native, Expo, and React for both mobile and web platforms. Implemented core features and integrations for a seamless fitness tracking and class booking experience.',
         'Shriram Properties Web App: Built frontend with React (TypeScript) and backend with NestJS, delivering robust solutions for real estate property and process management.',
         'Designing, coding, and maintaining scalable applications, while following best practices in JavaScript, TypeScript, API design, and security.',
         'Managing data modeling, migrations, and querying with PostgreSQL and MariaDB databases.',
