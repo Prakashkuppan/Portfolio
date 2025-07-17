@@ -10,7 +10,7 @@ const Projects = () => {
       description: 'Fitness platform for class booking, workout tracking, and analytics. Developed core features and integrations for seamless fitness tracking and class booking experience.',
       image: 'I-love-gym-M.jpg',
       tech: ['React Expo', 'React', 'PostgreSQL' ,'Nest.js' , 'Type Script'],
-      github: 'https://github.com/Prakashkuppan',
+      github: 'https://cdn.magicdecor.in/com/2023/10/13182750/I-love-gym-M.jpg',
       live: '',
       featured: true,
       details: 'Developed using React Native, Expo, and React for both mobile and web platforms. Implemented analytics, booking, and user management features.'
