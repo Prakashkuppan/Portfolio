@@ -13,14 +13,20 @@ import {
 const About = () => {
   const techStack = [
     { name: 'React', icon: Code, color: 'text-blue-500' },
-    { name: 'Node.js', icon: Cpu, color: 'text-green-500' },
     { name: 'TypeScript', icon: Code, color: 'text-blue-600' },
     { name: 'PostgreSQL', icon: Database, color: 'text-blue-400' },
+    { name: 'MySQL', icon: Database, color: 'text-blue-400' },
     { name: 'Next.js', icon: Globe, color: 'text-black dark:text-white' },
     { name: 'React Native', icon: Smartphone, color: 'text-blue-500' },
     { name: 'GraphQL', icon: Zap, color: 'text-pink-500' },
-    { name: 'Docker', icon: Shield, color: 'text-blue-600' },
     { name: 'Git', icon: GitBranch, color: 'text-orange-500' },
+    { name: 'NestJS', icon: Code, color: 'text-blue-600' },
+    { name: 'GitLab', icon: GitBranch, color: 'text-orange-500' },
+    { name: 'MariaDB', icon: Database, color: 'text-blue-400' },
+    { name: 'Expo', icon: Globe, color: 'text-black dark:text-white' },
+    { name: 'JavaScript', icon: Code, color: 'text-blue-600' },
+    { name: 'HTML/CSS', icon: Code, color: 'text-blue-600' },
+    { name: 'Tailwind CSS', icon: Code, color: 'text-blue-600' },
   ]
 
   return (
@@ -113,7 +119,7 @@ const About = () => {
         >
           <div className="text-center">
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              3+
+              1+
             </div>
             <div className="text-gray-600 dark:text-gray-400">
               Years Experience
@@ -121,7 +127,7 @@ const About = () => {
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              20+
+              3+
             </div>
             <div className="text-gray-600 dark:text-gray-400">
               Projects Completed
@@ -129,7 +135,7 @@ const About = () => {
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              15+
+              5+
             </div>
             <div className="text-gray-600 dark:text-gray-400">
               Happy Clients

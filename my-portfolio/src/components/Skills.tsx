@@ -9,27 +9,27 @@ const Skills = () => {
         { name: 'React', proficiency: 90, info: 'Advanced' },
         { name: 'React Native', proficiency: 85, info: 'Mobile & cross-platform' },
         { name: 'Expo', proficiency: 80, info: 'React Native toolchain' },
-        { name: 'TypeScript', proficiency: 85, info: 'Strong typing' },
+        { name: 'TypeScript', proficiency: 90, info: 'Strong typing' },
         { name: 'JavaScript', proficiency: 90, info: 'Core language' },
         { name: 'HTML/CSS', proficiency: 90, info: 'Web fundamentals' },
-        { name: 'Next.js', proficiency: 80, info: 'React framework' },
+        { name: 'Next.js', proficiency: 85, info: 'React framework' },
         { name: 'Vite', proficiency: 80, info: 'Frontend tooling' }
       ]
     },
     {
       category: 'Backend',
       skills: [
-        { name: 'NestJS', proficiency: 80, info: 'Node.js framework' },
+        { name: 'NestJS', proficiency: 85, info: 'Node.js framework' },
         { name: 'Python', proficiency: 70, info: 'Scripting & backend' }
       ]
     },
     {
       category: 'Databases',
       skills: [
-        { name: 'PostgreSQL', proficiency: 80, info: 'Relational DB' },
-        { name: 'MariaDB', proficiency: 75, info: 'Relational DB' },
-        { name: 'MySQL', proficiency: 75, info: 'Relational DB' },
-        { name: 'DBMS', proficiency: 70, info: 'General DB concepts' }
+        { name: 'PostgreSQL', proficiency: 90, info: 'Relational DB' },
+        { name: 'MySQL', proficiency: 90, info: 'Relational DB' },
+        { name: 'DBMS', proficiency: 70, info: 'General DB concepts' },
+        { name: 'MariaDB', proficiency: 70, info: 'Relational DB' },
       ]
     },
     {

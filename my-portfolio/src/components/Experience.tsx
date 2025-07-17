@@ -19,7 +19,7 @@ const Experience = () => {
         'Coordinating with cross-functional teams to define requirements, improve user experience, and ensure timely project delivery.',
         'Ensuring code quality through regular reviews, unit testing, and comprehensive documentation.'
       ],
-      tech: ['React', 'React Native', 'Expo', 'TypeScript', 'NestJS', 'PostgreSQL', 'MariaDB', 'JavaScript']
+      tech: ['React', 'React Native', 'Expo', 'TypeScript', 'NestJS', 'PostgreSQL', 'MariaDB', 'JavaScript', 'MySQL']
     },
     {
       id: 2,
