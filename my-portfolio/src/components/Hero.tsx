@@ -10,7 +10,7 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
         <div className="absolute inset-0 opacity-50 dark:opacity-70" style={{
@@ -116,8 +116,10 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2 px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 font-semibold rounded-lg transition-colors"
             >
-              <Download size={20} />
-              Download CV
+                <Download size={20} />
+              <a href="/Prakash Kuppan.pdf" download>
+                Download CV
+              </a>
             </motion.button>
           </motion.div>
         </motion.div>

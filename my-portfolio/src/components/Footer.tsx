@@ -26,7 +26,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-gray-900 dark:bg-black text-white">
+    <footer className="bg-gray-900 dark:bg-black text-white dark:text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Logo and Description */}
@@ -37,7 +37,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-center md:text-left"
           >
-            <h3 className="text-xl font-bold mb-2">Prakashkuppan</h3>
+            <h3 className="text-xl font-bold mb-2 text-white dark:text-gray-300">Prakashkuppan</h3>
             <p className="text-gray-400 text-sm">
               Full Stack Developer passionate about creating meaningful digital experiences.
             </p>
@@ -55,25 +55,25 @@ const Footer = () => {
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <a 
                 href="#home" 
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white dark:hover:text-blue-400 transition-colors"
               >
                 Home
               </a>
               <a 
                 href="#about" 
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white dark:hover:text-blue-400 transition-colors"
               >
                 About
               </a>
               <a 
                 href="#projects" 
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white dark:hover:text-blue-400 transition-colors"
               >
                 Projects
               </a>
               <a 
                 href="#contact" 
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white dark:hover:text-blue-400 transition-colors"
               >
                 Contact
               </a>
@@ -102,7 +102,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className={`p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-300 text-gray-400 ${social.color}`}
+                  className={`p-2 bg-gray-800 dark:bg-gray-700 rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-all duration-300 text-gray-400 dark:text-gray-300 ${social.color}`}
                 >
                   <social.icon size={20} />
                 </motion.a>

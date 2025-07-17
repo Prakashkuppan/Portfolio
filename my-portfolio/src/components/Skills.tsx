@@ -1,41 +1,50 @@
 import { motion } from 'framer-motion'
+import { Tooltip } from 'react-tooltip'
 
 const Skills = () => {
   const skillCategories = [
     {
-      category: 'Frontend Development',
+      category: 'Frontend',
       skills: [
-        { name: 'React', proficiency: 90 },
-        { name: 'TypeScript', proficiency: 85 },
-        { name: 'Next.js', proficiency: 80 },
-        { name: 'Tailwind CSS', proficiency: 95 },
-        { name: 'HTML/CSS', proficiency: 90 },
+        { name: 'React', proficiency: 90, info: 'Advanced' },
+        { name: 'React Native', proficiency: 85, info: 'Mobile & cross-platform' },
+        { name: 'Expo', proficiency: 80, info: 'React Native toolchain' },
+        { name: 'TypeScript', proficiency: 85, info: 'Strong typing' },
+        { name: 'JavaScript', proficiency: 90, info: 'Core language' },
+        { name: 'HTML/CSS', proficiency: 90, info: 'Web fundamentals' },
+        { name: 'Next.js', proficiency: 80, info: 'React framework' },
+        { name: 'Vite', proficiency: 80, info: 'Frontend tooling' }
       ]
     },
     {
-      category: 'Backend Development',
+      category: 'Backend',
       skills: [
-        { name: 'Nest.js', proficiency: 85 },
-        { name: 'MySQL', proficiency: 80 },
-        { name: 'PostgreSQL', proficiency: 75 },
-        { name: 'MongoDB', proficiency: 70 },
-        { name: 'GraphQL', proficiency: 75 }, 
+        { name: 'NestJS', proficiency: 80, info: 'Node.js framework' },
+        { name: 'Python', proficiency: 70, info: 'Scripting & backend' }
       ]
     },
     {
-      category: 'Tools & Others',
+      category: 'Databases',
       skills: [
-        { name: 'Git', proficiency: 90 },
-        { name: 'Docker', proficiency: 70 },
-        { name: 'AWS', proficiency: 65 },
-        { name: 'CI/CD', proficiency: 75 },
-        { name: 'Testing', proficiency: 80 },
+        { name: 'PostgreSQL', proficiency: 80, info: 'Relational DB' },
+        { name: 'MariaDB', proficiency: 75, info: 'Relational DB' },
+        { name: 'MySQL', proficiency: 75, info: 'Relational DB' },
+        { name: 'DBMS', proficiency: 70, info: 'General DB concepts' }
+      ]
+    },
+    {
+      category: 'Other',
+      skills: [
+        { name: 'Java', proficiency: 60, info: 'Basics' },
+        { name: 'C', proficiency: 60, info: 'Basics' },
+        { name: 'C++', proficiency: 60, info: 'Basics' },
+        { name: 'MS Office', proficiency: 80, info: 'Productivity tools' }
       ]
     }
   ]
 
   return (
-    <section id="skills" className="py-20 bg-white dark:bg-gray-900">
+    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -54,7 +63,7 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.category}
@@ -62,9 +71,9 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
               viewport={{ once: true }}
-              className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6"
+              className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg border border-blue-100 dark:border-blue-900"
             >
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+              <h3 className="text-xl font-semibold text-blue-700 dark:text-blue-300 mb-6">
                 {category.category}
               </h3>
               <div className="space-y-4">
@@ -75,9 +84,10 @@ const Skills = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: skillIndex * 0.1 }}
                     viewport={{ once: true }}
+                    className="group"
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300" data-tooltip-id={`tip-${skill.name}`} data-tooltip-content={skill.info}>
                         {skill.name}
                       </span>
                       <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -93,6 +103,7 @@ const Skills = () => {
                         className="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full"
                       />
                     </div>
+                    <Tooltip id={`tip-${skill.name}`} />
                   </motion.div>
                 ))}
               </div>

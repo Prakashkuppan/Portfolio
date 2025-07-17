@@ -1,14 +1,11 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Sun, Moon, Menu, X } from 'lucide-react'
+import { useDarkMode } from '../context/DarkModeContext'
 
-interface NavbarProps {
-  darkMode: boolean
-  setDarkMode: (darkMode: boolean) => void
-}
-
-const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const { darkMode, toggleDarkMode } = useDarkMode()
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -67,7 +64,8 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              onClick={() => setDarkMode(!darkMode)}
+              onClick={toggleDarkMode}
+              aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
@@ -78,6 +76,7 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(!isOpen)}
+                aria-label={isOpen ? 'Close menu' : 'Open menu'}
                 className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               >
                 {isOpen ? <X size={20} /> : <Menu size={20} />}

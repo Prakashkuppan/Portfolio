@@ -1,72 +1,38 @@
 import { motion } from 'framer-motion'
 import { ExternalLink, Github, Eye } from 'lucide-react'
+import { useState } from 'react'
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, product management, shopping cart, and payment integration.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Tailwind CSS'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: true
+      title: 'Rizzfit Mobile & Web App',
+      description: 'Fitness platform for class booking, workout tracking, and analytics. Developed core features and integrations for seamless fitness tracking and class booking experience.',
+      image: 'https://images.unsplash.com/photo-1519864600265-abb23847ef2c?w=500&h=300&fit=crop',
+      tech: ['React Native', 'Expo', 'React', 'Python', 'PostgreSQL', 'MariaDB'],
+      github: 'https://github.com/Prakashkuppan',
+      live: '',
+      featured: true,
+      details: 'Developed using React Native, Expo, and React for both mobile and web platforms. Implemented analytics, booking, and user management features.'
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop',
-      tech: ['Next.js', 'TypeScript', 'Prisma', 'Socket.io', 'Framer Motion'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: true
-    },
-    {
-      id: 3,
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather dashboard that displays current weather, forecasts, and interactive maps using multiple weather APIs.',
-      image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=500&h=300&fit=crop',
-      tech: ['React', 'OpenWeather API', 'Chart.js', 'Geolocation API'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
-    },
-    {
-      id: 4,
-      title: 'Social Media Clone',
-      description: 'A social media platform with features like posts, comments, likes, user profiles, and real-time notifications.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop',
-      tech: ['React', 'GraphQL', 'MongoDB', 'Apollo Client', 'AWS S3'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website built with React and Tailwind CSS, featuring smooth animations and dark mode.',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop',
-      tech: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'AI Chat Application',
-      description: 'An AI-powered chat application that integrates with OpenAI API to provide intelligent responses and conversation history.',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop',
-      tech: ['React', 'OpenAI API', 'Node.js', 'Express', 'Socket.io'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
+      title: 'Shriram Properties Web App',
+      description: 'Real estate solution for property, user, and process management. Built frontend with React (TypeScript) and backend with NestJS.',
+      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&h=300&fit=crop',
+      tech: ['React', 'TypeScript', 'NestJS', 'PostgreSQL', 'MariaDB'],
+      github: 'https://github.com/Prakashkuppan',
+      live: '',
+      featured: true,
+      details: 'Delivered robust solutions for real estate property and process management, including user authentication, property listings, and admin dashboards.'
     }
   ]
 
+  type Project = typeof projects[number];
+  const [modalProject, setModalProject] = useState<Project | null>(null)
+
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -94,7 +60,8 @@ const Projects = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-              className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-blue-100 dark:border-blue-900 cursor-pointer"
+              onClick={() => setModalProject(project)}
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
@@ -104,21 +71,19 @@ const Projects = () => {
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
                 {project.featured && (
-                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium animate-pulse">
                     Featured
                   </div>
                 )}
               </div>
-
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-xl font-semibold text-blue-700 dark:text-blue-300 mb-3">
                   {project.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
                   {project.description}
                 </p>
-
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
@@ -130,7 +95,6 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-
                 {/* Project Links */}
                 <div className="flex gap-3">
                   <motion.a
@@ -140,26 +104,69 @@ const Projects = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                    onClick={e => e.stopPropagation()}
                   >
                     <Github size={16} />
                     Code
                   </motion.a>
-                  <motion.a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    <ExternalLink size={16} />
-                    Live Demo
-                  </motion.a>
+                  {project.live && (
+                    <motion.a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      onClick={e => e.stopPropagation()}
+                    >
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
+        {/* Modal for Project Details */}
+        {modalProject && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60" onClick={() => setModalProject(null)}>
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="bg-white dark:bg-gray-900 rounded-lg p-8 max-w-lg w-full shadow-2xl relative"
+              onClick={e => e.stopPropagation()}
+            >
+              <button className="absolute top-2 right-2 text-gray-400 hover:text-blue-600 text-2xl font-bold" onClick={() => setModalProject(null)}>&times;</button>
+              <img src={modalProject.image} alt={modalProject.title} className="w-full h-48 object-cover rounded mb-4" />
+              <h3 className="text-2xl font-bold text-blue-700 dark:text-blue-300 mb-2">{modalProject.title}</h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">{modalProject.details}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {modalProject.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded-full text-xs font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="flex gap-3">
+                <a href={modalProject.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                  <Github size={16} />
+                  Code
+                </a>
+                {modalProject.live && (
+                  <a href={modalProject.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    <ExternalLink size={16} />
+                    Live Demo
+                  </a>
+                )}
+              </div>
+            </motion.div>
+          </div>
+        )}
 
         {/* View More Projects Button */}
         <motion.div

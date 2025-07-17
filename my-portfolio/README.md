@@ -1,4 +1,4 @@
-# John Doe - Personal Portfolio
+# Prakash Doe - Personal Portfolio
 
 A modern, responsive personal portfolio website built with React, TypeScript, and Tailwind CSS. Features smooth animations, dark mode toggle, and a professional design.
 
@@ -170,4 +170,4 @@ If you have any questions or need help customizing the portfolio:
 
 ---
 
-**Made with ❤️ by John Doe**
+**Made with ❤️ by Prakash Doe**
