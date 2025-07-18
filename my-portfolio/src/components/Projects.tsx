@@ -25,6 +25,17 @@ const Projects = () => {
       live: '',
       featured: true,
       details: 'Delivered robust solutions for real estate property and process management, including user authentication, property listings, and admin dashboards.'
+    },
+    {
+      id: 3,
+      title: 'Education Management Platform',
+      description: 'Comprehensive platform for managing educational resources, student data, and class schedules. Built with a modern tech stack for seamless administration and user experience.',
+      image: 'https://img.freepik.com/premium-photo/digital-learning-global-education-concept_661495-39603.jpg',
+      tech: ['React', 'TypeScript', 'NestJS', 'MySQL', 'React Native'],
+      github: 'https://github.com/Prakashkuppan',
+      live: '',
+      featured: true,
+      details: 'Developed core modules for student enrollment, resource allocation, and schedule management. Integrated secure authentication and real-time data updates for administrators and users.'
     }
   ]
 
