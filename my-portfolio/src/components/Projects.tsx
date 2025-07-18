@@ -8,9 +8,9 @@ const Projects = () => {
       id: 1,
       title: 'Gym Related application',
       description: 'Fitness platform for class booking, workout tracking, and analytics. Developed core features and integrations for seamless fitness tracking and class booking experience.',
-      image: 'I-love-gym-M.jpg',
+      image: 'https://cdn.magicdecor.in/com/2023/10/13182750/I-love-gym-M.jpg',
       tech: ['React Expo', 'React', 'PostgreSQL' ,'Nest.js' , 'Type Script'],
-      github: 'https://stock.adobe.com/in/images/black-desk-of-free-space-for-your-decoration-and-blurred-gym-interior-metal-dumbbells-and-fit-life/317724775',
+      github: 'https://cdn.magicdecor.in/com/2023/10/13182750/I-love-gym-M.jpg',
       live: '',
       featured: true,
       details: 'Developed using React Native, Expo, and React for both mobile and web platforms. Implemented analytics, booking, and user management features.'
