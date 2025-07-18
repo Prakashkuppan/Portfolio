@@ -117,7 +117,7 @@ const Hero = () => {
               className="flex items-center gap-2 px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 font-semibold rounded-lg transition-colors"
             >
                 <Download size={20} />
-              <a href="/Prakash Kuppan.pdf" download>
+              <a href="/Prakash+Kuppan.docx.pdf" download>
                 Download CV
               </a>
             </motion.button>
