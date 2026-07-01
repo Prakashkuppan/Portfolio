@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion'
-import { 
-  Code, 
+import CountUp from './CountUp'
+import Parallax from './Parallax'
+import {
+  Code,
   Database, 
   Globe, 
   Smartphone, 
-  Zap, 
-  Shield,
+  Zap,
   GitBranch,
-  Cpu
 } from 'lucide-react'
 
 const About = () => {
@@ -58,8 +58,8 @@ const About = () => {
             </h3>
             <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
-                I'm a dedicated Full Stack Developer with over 3 years of experience 
-                building modern web applications. My journey in software development 
+                I'm a dedicated Full Stack Developer with over 2 years of experience
+                building modern web applications. My journey in software development
                 started with a curiosity about how things work on the internet, and 
                 it has evolved into a passion for creating meaningful digital experiences.
               </p>
@@ -88,7 +88,7 @@ const About = () => {
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center lg:text-left">
               Tech Stack
             </h3>
-            <div className="grid grid-cols-3 gap-6">
+            <Parallax amount={22} className="grid grid-cols-3 gap-6">
               {techStack.map((tech, index) => (
                 <motion.div
                   key={tech.name}
@@ -105,7 +105,7 @@ const About = () => {
                   </span>
                 </motion.div>
               ))}
-            </div>
+            </Parallax>
           </motion.div>
         </div>
 
@@ -117,38 +117,25 @@ const About = () => {
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
         >
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              1+
-            </div>
-            <div className="text-gray-600 dark:text-gray-400">
-              Years Experience
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              3+
-            </div>
-            <div className="text-gray-600 dark:text-gray-400">
-              Projects Completed
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              5+
-            </div>
-            <div className="text-gray-600 dark:text-gray-400">
-              Happy Clients
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              100%
-            </div>
-            <div className="text-gray-600 dark:text-gray-400">
-              Client Satisfaction
-            </div>
-          </div>
+          {[
+            { end: 2, suffix: '+', label: 'Years Experience' },
+            { end: 5, suffix: '+', label: 'Projects Delivered' },
+            { end: 15, suffix: '+', label: 'Technologies' },
+            { end: 100, suffix: '%', label: 'Dedication' },
+          ].map((stat) => (
+            <motion.div
+              key={stat.label}
+              whileHover={{ scale: 1.05, y: -4 }}
+              className="text-center"
+            >
+              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                <CountUp end={stat.end} suffix={stat.suffix} />
+              </div>
+              <div className="text-gray-600 dark:text-gray-400">
+                {stat.label}
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

@@ -1,11 +1,30 @@
 @import "tailwindcss";
 
+/* Drive dark mode from the `.dark` class on <html> (toggled in DarkModeContext)
+   instead of Tailwind v4's default `prefers-color-scheme` media query. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Ensure full viewport coverage for dark mode */
 html {
   scroll-behavior: smooth;
   min-height: 100vh;
   transition: background-color 0.3s ease;
   background-color: #ffffff;
+  /* Offset snap + anchor jumps so the fixed navbar (h-16 = 4rem) never covers headings */
+  scroll-padding-top: 4rem;
+}
+
+/* Scroll-snap "slideshow" — each section snaps into view as you scroll.
+   Desktop only (touch scrolling stays free), and disabled for reduced-motion. */
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+  main > section {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    min-height: 100vh;
+  }
 }
 
 html.dark {
@@ -87,6 +106,24 @@ body.dark {
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+/* Animated gradient text (used for the hero name) */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient-shift 5s ease infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-gradient,
+  .animate-float {
+    animation: none;
+  }
 }
 
 /* Glass morphism effect */

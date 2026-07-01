@@ -14,12 +14,14 @@ const Experience = () => {
       details: [
         'Gym application: Developed using React Native, Expo, and React for both mobile and web platforms. Implemented core features and integrations for a seamless fitness tracking and class booking experience.',
         'Shriram Properties Web App: Built frontend with React (TypeScript) and backend with NestJS, delivering robust solutions for real estate property and process management.',
+        'Doctor Payroll Management System: Developed a payroll platform for healthcare staff — salary processing, attendance, payslip generation, and role-based access — using React, TypeScript, NestJS, and PostgreSQL.',
+        'Investment & Trading Platform: Led development of a cross-platform (web + React Native/Expo mobile) trading app with portfolio tracking, order management, and real-time market data over WebSockets, backed by NestJS and PostgreSQL.',
         'Designing, coding, and maintaining scalable applications, while following best practices in JavaScript, TypeScript, API design, and security.',
         'Managing data modeling, migrations, and querying with PostgreSQL and MariaDB databases.',
         'Coordinating with cross-functional teams to define requirements, improve user experience, and ensure timely project delivery.',
         'Ensuring code quality through regular reviews, unit testing, and comprehensive documentation.'
       ],
-      tech: ['React', 'React Native', 'Expo', 'TypeScript', 'NestJS', 'PostgreSQL', 'MariaDB', 'JavaScript', 'MySQL']
+      tech: ['React', 'React Native', 'Expo', 'TypeScript', 'NestJS', 'PostgreSQL', 'WebSocket', 'MariaDB', 'JavaScript', 'MySQL']
     },
     {
       id: 2,

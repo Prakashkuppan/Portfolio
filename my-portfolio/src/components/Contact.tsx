@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react'
+import Parallax from './Parallax'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -51,7 +52,7 @@ const Contact = () => {
       icon: Phone,
       title: 'Phone',
       value: '+91 8072087314',
-      link: 'tel:+919840000000'
+      link: 'tel:+918072087314'
     },
     {
       icon: MapPin,
@@ -65,26 +66,15 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: Github,
-      url: 'https://github.com/prakashkuppan',
+      url: 'https://github.com/Prakashkuppan',
       color: 'hover:text-gray-900 dark:hover:text-white'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://linkedin.com',
+      // TODO: replace with your real LinkedIn profile URL
+      url: 'https://www.linkedin.com/in/prakash-kuppan',
       color: 'hover:text-blue-600'
-    },
-    {
-      name: 'Twitter',
-      icon: Twitter,
-      url: 'https://twitter.com',
-      color: 'hover:text-blue-400'
-    },
-    {
-      name: 'Instagram',
-      icon: Instagram,
-      url: 'https://instagram.com',
-      color: 'hover:text-pink-500'
     }
   ]
 
@@ -121,7 +111,7 @@ const Contact = () => {
             </h3>
             
             {/* Contact Info */}
-            <div className="space-y-6 mb-8">
+            <Parallax amount={18} className="space-y-6 mb-8">
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={info.title}
@@ -146,7 +136,7 @@ const Contact = () => {
                   </div>
                 </motion.a>
               ))}
-            </div>
+            </Parallax>
 
             {/* Social Links */}
             <div>

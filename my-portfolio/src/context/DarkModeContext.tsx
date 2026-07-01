@@ -30,7 +30,9 @@ export const DarkModeProvider = ({ children }: { children: ReactNode }) => {
     }
     try {
       localStorage.setItem('darkMode', darkMode.toString());
-    } catch {}
+    } catch {
+      // Ignore storage errors (e.g. private mode / disabled storage)
+    }
   }, [darkMode]);
 
   const toggleDarkMode = () => setDarkMode((prev) => !prev);
